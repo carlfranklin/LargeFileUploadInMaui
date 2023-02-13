@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FileUploadInMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+
+            <Button
+                x:Name="FilePickerBtn"
+                Text="Select file"
+                SemanticProperties.Hint="Selects a file"
+                Clicked="OnFilePickerClicked"
+                HorizontalOptions="Center" />
+
+            <Label x:Name="UploadMessage"
+                   FontSize="14"
+                   HorizontalOptions="Center" />
+
+            <ProgressBar x:Name="UploadProgressBar"
+                         ProgressColor="Orange"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
